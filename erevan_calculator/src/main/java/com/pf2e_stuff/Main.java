@@ -1,3 +1,5 @@
+package com.pf2e_stuff;
+
 import javax.swing.JLabel;
 
 public class Main {
