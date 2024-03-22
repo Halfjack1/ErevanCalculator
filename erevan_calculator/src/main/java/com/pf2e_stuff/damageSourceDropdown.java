@@ -16,6 +16,14 @@ public class damageSourceDropdown extends damageSource{
         gui.addLabel(initName);
         dropdown = gui.addDropdown(initNames);
     }
+    public damageSourceDropdown(String initName, String[] initNames, Integer[] initDice, Integer[] initDieTypes, GUI gui, JComboBox<String> initDropdown){
+        super(initName, 0, 0);
+        choiceNames = initNames;
+        diceNumbers = initDice;
+        diceTypes = initDieTypes;
+        gui.addLabel(initName);
+        dropdown = initDropdown;
+    }
     public int getDice(){
         int index = dropdown.getSelectedIndex();
         return diceNumbers[index];
