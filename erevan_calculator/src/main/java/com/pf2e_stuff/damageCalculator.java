@@ -15,9 +15,12 @@ public class damageCalculator {
         damageLabel = initJLabel;
     }
     //gets the total damage and sets the label to the value
-    public void totalDamage(){
+    public String totalDamage(){
         Map<Integer, Integer> damageDice = getDamageDice();
-        damageLabel.setText(getTotalDamageString(damageDice));
+        String damageString = getTotalDamageString(damageDice);
+        damageLabel.setText(damageString);
+        return damageString;
+
     }
     //loops through all damage sources and totals the numbers of dice by their types
     private Map<Integer, Integer> getDamageDice(){
