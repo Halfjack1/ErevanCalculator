@@ -43,6 +43,7 @@ public class GUI implements EventListener{
         panel.add(checkBox);
         checkBox.addActionListener(new ActionListener() {
             @Override
+            //recalculates the damage when the checkbox is modified
             public void actionPerformed(ActionEvent event) {
                 dmgCalc.totalDamage();
             }
@@ -59,6 +60,7 @@ public class GUI implements EventListener{
         }
         dropdown.addActionListener(new ActionListener() {
             @Override
+            //recalculates the damage when the dropdown is modified
             public void actionPerformed(ActionEvent event) {
                 dmgCalc.totalDamage();
             }

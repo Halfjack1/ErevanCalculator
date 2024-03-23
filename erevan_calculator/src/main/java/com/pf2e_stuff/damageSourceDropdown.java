@@ -16,6 +16,7 @@ public class damageSourceDropdown extends damageSource{
         gui.addLabel(initName);
         dropdown = gui.addDropdown(initNames);
     }
+    //existing dropdown
     public damageSourceDropdown(String initName, String[] initNames, Integer[] initDice, Integer[] initDieTypes, GUI gui, JComboBox<String> initDropdown){
         super(initName, 0, 0);
         choiceNames = initNames;
