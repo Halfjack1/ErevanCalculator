@@ -5,6 +5,26 @@ import javax.swing.JLabel;
 public class Main {
     public static void main(String[] args){
         GUI gui = new GUI();
+        //array of all the attack roll bonus sources, creates all in the gui
+        attackBonusSource[] attackBonusSources = {
+            new attackBonusSource("Base", 23),
+            new attackBonusSource("Agile MAP", new int[] {0,-4,-8}),
+            new attackBonusCheckbox("Hunt Prey", new int[] {0, +2, +4}, gui, true),
+            new attackBonusCheckbox("King's Blessing", 2, gui, false),
+            new attackBonusCheckbox("Flat Footed", 2, gui, true),
+            new attackBonusCheckbox("penetrating arrow", 3, gui, true),
+            new attackBonusCheckbox("Devil Trigger Combo", 7, gui, false),
+            new attackBonusCheckbox("Shrike Rune", 10, gui, false)
+        };
+        //makes the attack bonus label
+        JLabel attackBonusIndicator = gui.addLabel("null");
+        //makes an attack bonus calculator and gives it to the gui
+        attackBonusCalculator atkBonusCalc = new attackBonusCalculator(attackBonusSources, attackBonusIndicator);
+        gui.setAtkCalc(atkBonusCalc);
+        //totals the attack bonuses
+        atkBonusCalc.attackBonusString();
+
+
         //array of all the sources of damage, and creates them all in the gui
         damageSource[] damageSources = {
             new damageSourceDropdown("Weapon", 
@@ -17,6 +37,7 @@ public class Main {
 
             new damageSourceCheckBox("Sneak Attack", 1, 6, gui,true),
             new damageSourceCheckBox("Melee", 3, 1, gui,true),
+            new damageSourceCheckBox("Penetrating Arrow", -3, 1, gui, attackBonusSources[5].getCheckBox()),
             new damageSourceCheckBox("Devil Trigger 1/turn", 1, 6, gui),
             new damageSourceCheckBox("Devil Trigger Combo", 1, 8, gui),
             new damageSourceCheckBox("Shrike Rune", 1, 6, gui),
@@ -36,8 +57,7 @@ public class Main {
         //totals the damage 
         dmgCalc.totalDamage();
         //base to hit bonuses
-        gui.addLabel("+22/+20/+18 to hit vs hunted prey");
-        gui.addLabel("+22/+18/+14 to hit vs anything else");
-
+        gui.addLabel("+23/+21/+19 to hit vs hunted prey");
+        gui.addLabel("+23/+19/+15 to hit vs anything else");
     }    
 }

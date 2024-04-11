@@ -14,6 +14,7 @@ public class GUI implements EventListener{
 
     public JLabel damageIndicator;
     public damageCalculator dmgCalc;
+    public attackBonusCalculator atkBonusCalc;
 
     //constructor that creates the window
     public GUI(){
@@ -46,6 +47,7 @@ public class GUI implements EventListener{
             //recalculates the damage when the checkbox is modified
             public void actionPerformed(ActionEvent event) {
                 dmgCalc.totalDamage();
+                atkBonusCalc.attackBonusString();
             }
         });
         frame.pack();
@@ -63,6 +65,7 @@ public class GUI implements EventListener{
             //recalculates the damage when the dropdown is modified
             public void actionPerformed(ActionEvent event) {
                 dmgCalc.totalDamage();
+                atkBonusCalc.attackBonusString();
             }
         });
         
@@ -72,5 +75,9 @@ public class GUI implements EventListener{
     //gives the GUI object a damage calculator object
     public void setDmgCalc(damageCalculator newDmgCalc){
         dmgCalc = newDmgCalc;
+    }
+    //and an attack bonus calculator
+    public void setAtkCalc(attackBonusCalculator newAtkCalc){
+        atkBonusCalc = newAtkCalc;
     }
 }
