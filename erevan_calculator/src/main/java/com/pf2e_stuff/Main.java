@@ -29,7 +29,7 @@ public class Main {
         damageSource[] damageSources = {
             new damageSourceDropdown("Weapon", 
                 new String[] {"Bowblade","Mercy","Fist"}, 
-                new Integer[] {3,2,2}, 
+                new Integer[] {4,3,3}, 
                 new Integer[] {6,6,4}, gui),
 
             new damageSourceCheckBox("Psychic Glyph", 2, 12,gui,true),
