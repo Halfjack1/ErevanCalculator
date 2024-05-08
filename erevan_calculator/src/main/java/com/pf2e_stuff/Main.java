@@ -7,7 +7,7 @@ public class Main {
         GUI gui = new GUI();
         //array of all the attack roll bonus sources, creates all in the gui
         attackBonusSource[] attackBonusSources = {
-            new attackBonusSource("Base", 23),
+            new attackBonusSource("Base", 25),
             new attackBonusSource("Agile MAP", new int[] {0,-4,-8}),
             new attackBonusCheckbox("Hunt Prey", new int[] {0, +2, +4}, gui, true),
             new attackBonusCheckbox("King's Blessing", 2, gui, false),
@@ -29,11 +29,11 @@ public class Main {
         damageSource[] damageSources = {
             new damageSourceDropdown("Weapon", 
                 new String[] {"Bowblade","Mercy","Fist"}, 
-                new Integer[] {4,3,3}, 
+                new Integer[] {5,3,3}, 
                 new Integer[] {6,6,4}, gui),
 
             new damageSourceCheckBox("Psychic Glyph", 2, 12,gui,true),
-            new damageSource("Strength+Specialization", 5, 1),
+            new damageSource("Strength+Specialization", 6, 1),
 
             new damageSourceCheckBox("Sneak Attack", 1, 6, gui,true),
             new damageSourceCheckBox("Melee", 3, 1, gui,true),
@@ -56,8 +56,5 @@ public class Main {
         gui.setDmgCalc(dmgCalc);
         //totals the damage 
         dmgCalc.totalDamage();
-        //base to hit bonuses
-        gui.addLabel("+23/+21/+19 to hit vs hunted prey");
-        gui.addLabel("+23/+19/+15 to hit vs anything else");
     }    
 }
