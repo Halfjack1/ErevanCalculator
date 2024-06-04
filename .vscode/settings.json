@@ -1,3 +1,10 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.runtimes": [{
+        "name" : "JavaSE-1.8",
+        "path": "C:\\Users\\tighe\\Documents\\OpenJDK-21",
+        "sources": "C:\\Users\\tighe\\Documents\\OpenJDK-21\\lib\\src.zip",
+        "javadoc": "https://docs.oracle.com/en/java/javase/11/docs/api",
+        "default": true
+    }]
 }

@@ -42,7 +42,7 @@ public class Main {
             new damageSourceCheckBox("Devil Trigger Combo", 1, 8, gui),
             new damageSourceCheckBox("Shrike Rune", 1, 6, gui),
             new damageSourceCheckBox("Breaker Bonus", 1, 6, gui,true),
-            new damageSourceCheckBox("Salter Buff", 4, 1, gui),
+            new damageSourceCheckBox("Salter Buff", 6, 1, gui),
             new damageSourceDropdown("Oculus Buff",
                 new String[] {"None","Tier 1","Tier 2","Tier 3","Tier 4","Tier 5"},
                 new Integer[] {0,2,4,6,8,10},
