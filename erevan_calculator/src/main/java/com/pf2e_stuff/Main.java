@@ -13,7 +13,7 @@ public class Main {
             new attackBonusCheckbox("King's Blessing", 2, gui, false),
             new attackBonusCheckbox("Flat Footed", 2, gui, true),
             new attackBonusCheckbox("penetrating arrow", 3, gui, true),
-            new attackBonusCheckbox("Devil Trigger Combo", 7, gui, false),
+            new attackBonusCheckbox("Devil Trigger Combo", 8, gui, false),
             new attackBonusCheckbox("Shrike Rune", 10, gui, false)
         };
         //makes the attack bonus label
